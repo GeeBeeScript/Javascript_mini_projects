@@ -12,11 +12,12 @@ forwardBtn.addEventListener("click", function () {
         currentItem.classList.add("hidden")
         itemCount++
         nextItem = contentContainers[itemCount]
-        nextItem.classList.remove("hidden")
-        console.log(itemCount);
-        
+        nextItem.classList.remove("hidden")        
     } else {
-        return
+        currentItem = contentContainers[itemCount]
+        currentItem.classList.add("hidden")
+        itemCount = 0
+        contentContainers[itemCount].classList.remove("hidden")        
     }
 })
 
@@ -27,17 +28,17 @@ backwardbtn.addEventListener("click", function () {
         itemCount--
         nextItem = contentContainers[itemCount]
         nextItem.classList.remove("hidden")
-        console.log(itemCount);
-        console.log("hi");
         
     } else {
-        return
+        currentItem = contentContainers[itemCount]
+        currentItem.classList.add("hidden")
+        itemCount = contentContainers.length - 1
+        contentContainers[itemCount].classList.remove("hidden")        
     }
 })
 
 surpriseBtn.addEventListener("click", function () {
     const randomValue = Math.floor(Math.random() * 4)
-    console.log(randomValue);
     currentItem = contentContainers[itemCount]
     currentItem.classList.add("hidden")
     randomItem = contentContainers[randomValue]
