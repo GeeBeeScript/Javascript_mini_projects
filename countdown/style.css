@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4rem 2rem 1rem 2rem;
+    gap: 1rem;
+}
+
+.img-con {
+    width: 33rem;
+    height: 20rem;
+    background-image: url("../images/skateboard.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.giveaway-info-con {
+    width: 33rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.txt {
+    color: rgb(8, 58, 75);
+}
+
+.end-details {
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    color: rgb(3, 9, 11);
+    font-weight: bold;
+}
+
+.info-txt {
+    margin: 1rem 0rem 0.75rem 0rem; 
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.countdown-con {
+    height: 4rem;
+    padding: 0.3rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.countdown-con > div {
+    height: 3.5rem;
+    width: 3.5rem;
+    background: rgb(7, 46, 52);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 0.15rem;
+}
+
+.value {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.time-unit {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+/* .day-con {
+    background: lightgrey;
+}
+
+.hour-con {
+    background: green;
+}
+
+.minutes-con {
+    background: purple;
+}
+
+.seconds-con {
+    background: darkblue;
+} */
