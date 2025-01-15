@@ -31,19 +31,20 @@ const dayOfTheWeek = [
 
 giveawayDate = new Date("01/22/2025 12:15:00");
 
+date = giveawayDate.getDate();
+day = dayOfTheWeek[giveawayDate.getDay()];
+month = months[giveawayDate.getMonth()];
+year = giveawayDate.getFullYear();
+hour = giveawayDate.getHours();
+minutes = giveawayDate.getMinutes();
+
+giveAwayEndDetails.textContent = `Giveaway ends on ${day}, ${date} ${month} ${year} ${hour}:${minutes}pm`;
+
 function getDateDifference () {
-    date = giveawayDate.getDate();
-    day = dayOfTheWeek[giveawayDate.getDay()];
-    month = months[giveawayDate.getMonth()];
-    year = giveawayDate.getFullYear();
-    hour = giveawayDate.getHours();
-    minutes = giveawayDate.getMinutes();
 
-    giveAwayEndDetails.textContent = `Giveaway ends on ${day}, ${date} ${month} ${year} ${hour}:${minutes}pm`;
+    const currDate = new Date();
 
-    const test1 = new Date();
-
-    const elapsedTime = giveawayDate.getTime() - test1.getTime();
+    const elapsedTime = giveawayDate.getTime() - currDate.getTime();
 
     const toSeconds = 1000;
     const toMinutes = 1000 * 60;
